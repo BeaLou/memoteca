@@ -5,12 +5,12 @@
   <form>
     <label for="pensamento">Pensamento</label>
     <input
-      type="textarea"
+      type="text"
       class="input"
       id="pensamento"
       name="pensamento"
       placeholder="Digite o pensamento"
-       [(ngModel)]="pensamento.conteudo"
+      [(ngModel)]="pensamento.conteudo"
     >
     <label for="autoria">Autoria ou fonte</label>
     <input
@@ -19,7 +19,7 @@
       id="autoria"
       name="autoria"
       placeholder="Digite a autoria ou fonte"
-      [value]="pensamento.autoria"
+      [(ngModel)]="pensamento.autoria"
     >
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
@@ -30,6 +30,7 @@
             id="modelo1"
             value="modelo1"
             name="modelo-card"
+            [(ngModel)]="pensamento.modelo"
           >
           <div class="custom-radio">
             <span></span>
@@ -51,6 +52,7 @@
             id="modelo2"
             value="modelo2"
             name="modelo-card"
+            [(ngModel)]="pensamento.modelo"
           >
           <div class="custom-radio">
             <span></span>
@@ -59,7 +61,7 @@
         </label>
         Prévia:
         <div class="modelo modelo2 ff-roboto-mono">
-          <img src="../../../../assets/Imagens/modelo2.png" alt="Aspas azul claro">
+          <img src="..\..\..\..\..\..\assets\Imagens\modelo2.png" alt="Aspas azul claro">
           <p class="conteudo">{{ pensamento.conteudo }}</p>
           <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
         </div>
@@ -72,6 +74,7 @@
             id="modelo3"
             value="modelo3"
             name="modelo-card"
+            [(ngModel)]="pensamento.modelo"
           >
           <div class="custom-radio">
             <span></span>
@@ -88,7 +91,7 @@
     </div>
     <div class="acoes">
       <button (click)="criarPensamento()" class="botao">Salvar</button>
-    <button (click)="cancelar()" class="botao">Cancelar</button>
+      <button (click)="cancelar()" class="botao">Cancelar</button>
     </div>
   </form>
 </section>
