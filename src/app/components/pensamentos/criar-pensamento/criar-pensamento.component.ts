@@ -26,6 +26,7 @@ export class CriarPensamentoComponent implements OnInit {
       autoria: ['', Validators.compose([Validators.required,
                     Validators.minLength(3), minusculoValidator])],
       modelo: 'modelo',
+      favorito: 'false'
     });
   }
 
