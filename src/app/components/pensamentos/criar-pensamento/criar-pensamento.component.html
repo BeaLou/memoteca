@@ -5,12 +5,11 @@
   <form [formGroup]="formulario">
     <label for="pensamento">Pensamento</label>
     <input
-      type="textarea"
+      type="text"
       class="input"
       id="pensamento"
       formControlName="conteudo"
-      placeholder="Digite o conteudo"
-    >
+      placeholder="Digite o conteudo">
       <div class="mensagem__erro" *ngIf="formulario.get('conteudo')?.errors && formulario.get('conteudo')?.touched" >
         O conteúdo é obrigatório.
       </div>
@@ -22,7 +21,7 @@
       id="autoria"
       formControlName="autoria"
       placeholder="Digite a autoria ou fonte"
-    >
+   >
     <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['required'] && formulario.get('autoria')?.touched" >
         A autoria é obrigatória.
       </div>
@@ -41,8 +40,7 @@
             type="radio"
             id="modelo1"
             value="modelo1"
-            formControlName="modelo"
-          >
+            formControlName="modelo">
           <div class="custom-radio">
             <span></span>
           </div>
@@ -63,7 +61,7 @@
             id="modelo2"
             value="modelo2"
             formControlName="modelo"
-          >
+>
           <div class="custom-radio">
             <span></span>
           </div>
@@ -74,7 +72,7 @@
           <img src="../../../../assets/Imagens/modelo2.png" alt="Aspas azul claro">
           <p class="conteudo">{{ formulario.get('conteudo')?.value  }}</p>
           <p class="autoria"><b>{{ formulario.get('autoria')?.value  }}</b></p>
-        </div>
+</div>
       </div>
 
       <div class="radio-modelo">
@@ -84,7 +82,7 @@
             id="modelo3"
             value="modelo3"
             formControlName="modelo"
-          >
+>
           <div class="custom-radio">
             <span></span>
           </div>
@@ -105,6 +103,6 @@
       [ngClass]="habilitarBotao()"
       >Salvar</button>
     <button (click)="cancelar()" class="botao">Cancelar</button>
-    </div>
+</div>
   </form>
 </section>

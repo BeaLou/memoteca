@@ -32,7 +32,7 @@ import { BotaoCarregarMaisComponent } from './components/pensamentos/listar-pens
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-  ],
+ ],
   providers: [],
   bootstrap: [AppComponent]
 })
